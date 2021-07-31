@@ -1,3 +1,3 @@
 # Placements App
 
-A web-app built using streamlit.
+A web-app built using streamlit and python.
