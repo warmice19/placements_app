@@ -80,7 +80,7 @@ y_data = le_target_vars.transform(arr_target)
 # TRAIN MODEL
 # -----------------------------------------------------
 
-# train
+# train model
 model = LogisticRegression()
 model.fit(X=x_data, y=y_data)
 
