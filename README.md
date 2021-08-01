@@ -1,6 +1,6 @@
 # Placements App
 
-[link to the web-app: ](https://pg-placements.herokuapp.com/)
+[link to the web-app ](https://pg-placements.herokuapp.com/)
 
 The following streamlit app is to predict the probability of getting placed after post graduation. 
 It is trained on dataset of students form different streams till there bachelors but who have gotten admission
