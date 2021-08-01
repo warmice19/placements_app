@@ -9,16 +9,16 @@ import matplotlib.pyplot as plt
 
 st.title("PG Placements ")
 
-df = pd.read_csv("./../data/placements_data.csv")
+df = pd.read_csv("./data/placements_data.csv")
 
 # -----------------------------------------------------
 # Load Model and Utilities
 # -----------------------------------------------------
 
-model = pickle.load(open("./../model/model_logistic_regression.pkl", "rb"))
-ss_input_vars = pickle.load(open("./../model/ss_input_vars.pkl", "rb"))
-ohe_input_vars = pickle.load(open("./../model/ohe_input_vars.pkl", "rb"))
-le_target_vars = pickle.load(open("./../model/le_target_vars.pkl", "rb"))
+model = pickle.load(open("./model/model_logistic_regression.pkl", "rb"))
+ss_input_vars = pickle.load(open("./model/ss_input_vars.pkl", "rb"))
+ohe_input_vars = pickle.load(open("./model/ohe_input_vars.pkl", "rb"))
+le_target_vars = pickle.load(open("./model/le_target_vars.pkl", "rb"))
 
 
 df = df.rename(
