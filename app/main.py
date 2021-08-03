@@ -9,16 +9,16 @@ import matplotlib.pyplot as plt
 
 st.title("PG Placements ")
 
-df = pd.read_csv("./data/placements_data.csv")
+df = pd.read_csv("./../data/placements_data.csv")
 
 # -----------------------------------------------------
 # Load Model and Utilities
 # -----------------------------------------------------
 
-model = pickle.load(open("./model/model_logistic_regression.pkl", "rb"))
-ss_input_vars = pickle.load(open("./model/ss_input_vars.pkl", "rb"))
-ohe_input_vars = pickle.load(open("./model/ohe_input_vars.pkl", "rb"))
-le_target_vars = pickle.load(open("./model/le_target_vars.pkl", "rb"))
+model = pickle.load(open("./../model/model_logistic_regression.pkl", "rb"))
+ss_input_vars = pickle.load(open("./../model/ss_input_vars.pkl", "rb"))
+ohe_input_vars = pickle.load(open("./../model/ohe_input_vars.pkl", "rb"))
+le_target_vars = pickle.load(open("./../model/le_target_vars.pkl", "rb"))
 
 
 df = df.rename(
@@ -123,7 +123,7 @@ if nav == "Check your Chances":
         ## **Congratulations!!**
         """
         )
-        st.write("You have a ", pred_p, " chance of getting placed")
+        st.write("You have a " + "{:.2f}".format(pred_p) + " chance of getting placed")
         st.markdown(
             """
             _To check the impact of various features in you result, click on the button below_
@@ -135,21 +135,20 @@ if nav == "Check your Chances":
     if pred_p < pred_np:
         st.markdown(
             """
-        ## No there yet
+        ## Not there yet
         ### Keep Trying
         """
         )
-        st.write("You have only ", pred_p, " chance of  getting placed")
+        st.write(
+            "You have only " + "{:.2f}".format(pred_p) + " chance of  getting placed"
+        )
         st.write(
             "To check the relative effect of various factors, click on the button below"
         )
+
         if st.button("Check"):
             st.write(coeff_bar)
 
-    # coeff_model = model.coef_[0]
-    # coeff_bar = px.bar([x for x in range(len(coeff_model))], coeff_model)
-
-    # st.write(coeff_bar)
 
 # ------------------------------
 # PLOTS
