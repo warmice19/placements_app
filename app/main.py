@@ -123,7 +123,7 @@ if nav == "Check your Chances":
         ## **Congratulations!!**
         """
         )
-        st.write("You have a " + "{:.2f}".format(pred_p) + " chance of getting placed")
+        st.write("You have a " + "{:.2f}".format(pred_p) + "% chance of getting placed")
         st.markdown(
             """
             _To check the impact of various features in you result, click on the button below_
@@ -140,7 +140,7 @@ if nav == "Check your Chances":
         """
         )
         st.write(
-            "You have only " + "{:.2f}".format(pred_p) + " chance of  getting placed"
+            "You have only " + "{:.2f}".format(pred_p) + "% chance of  getting placed"
         )
         st.write(
             "To check the relative effect of various factors, click on the button below"
