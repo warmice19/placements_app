@@ -1,7 +1,7 @@
 # Placements App
 - - - -
 
-[link to the web-app ](https://pg-placements.herokuapp.com/)
+link to the web-app: [https://pg-placements.herokuapp.com/](https://pg-placements.herokuapp.com/)
 
 A streamlit app to predict the probability of getting placed after post graduation. 
 
