@@ -67,8 +67,6 @@ if nav == "Check your Chances":
             "MBA Specialization", ("Mkt&HR", "Mkt&Fin")
         )
 
-        # etest_p = st.sidebar.slider("Placement Test Percentage: ", 0, 100, 50)
-
         return {
             "10th_percentage": tenth_p,
             "12th_percentage": twelfth_p,
@@ -112,7 +110,6 @@ if nav == "Check your Chances":
     # -----------------------------------------------------
     pred = model.predict_proba(arr_user_input)
 
-    # st.write(le_target_vars.classes_)
     pred_np = pred[0, 0] * 100
     pred_p = pred[0, 1] * 100
     coeff_model = model.coef_[0]
